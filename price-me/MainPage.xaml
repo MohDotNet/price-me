@@ -11,6 +11,7 @@
 
             <Entry
                 Placeholder="Cost Price"
+                x:Name="txtCost"
                 Keyboard="Numeric"
                 />
 
@@ -21,6 +22,7 @@
                     Text="Vat Inclusive"/>
 
                 <CheckBox
+                    x:Name="chkIncVat"
                     IsChecked="False"/>
             </HorizontalStackLayout>
 
@@ -32,12 +34,15 @@
             />
             
             <Slider
+                ValueChanged="Slider_ValueChanged"
                 Maximum="100"
+                
                 Minimum="0" />
 
             <Label
                 HorizontalTextAlignment="Center"
                 VerticalTextAlignment="Center"
+                x:Name="lblMarkup"
                 Text="0"/>
 
             <Label
@@ -47,7 +52,6 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <HorizontalStackLayout Padding="20" Spacing="20">
-
                 <Border
                     WidthRequest="150"
                     HeightRequest="150"
@@ -62,6 +66,7 @@
                         <Label
                             Text="R 0.00" 
                             FontSize="Medium"
+                            x:Name="lblSelling"
                             TextColor="BlueViolet"
                             />
 
@@ -82,6 +87,7 @@
 
                         <Label
                             Text="R 0.00" 
+                            x:Name="lblProfit"
                             FontSize="Medium"
                             TextColor="Green"
                             />

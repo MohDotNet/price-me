@@ -52,7 +52,7 @@ namespace price_me.Services
             return price - (price * (15d / 100d));
         }
 
-        private double GetMarkupValue()
+        public double GetMarkupValue()
         {
             return (costPrice * (markUp/100));
         }

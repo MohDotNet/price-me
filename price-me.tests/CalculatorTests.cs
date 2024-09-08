@@ -1,5 +1,3 @@
-using NuGet.Frameworks;
-
 namespace price_me.tests
 {
     [TestClass]
@@ -72,7 +70,6 @@ namespace price_me.tests
             Assert.AreEqual(expected, sellingPrice);
 
         }
-
 
         private double GetMarkupValue()
         {

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             x:Class="price_me.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10">
+
+            <Entry
+                Placeholder="Cost Price"
+                Keyboard="Numeric"
+                />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    Text="Vat Inclusive"/>
+
+                <CheckBox
+                    IsChecked="False"/>
+            </HorizontalStackLayout>
+
+            <Line HeightRequest="15" BackgroundColor="Aqua" />
+            <Label
+                 
+                Text="Drag slider for desired markup" 
+                FontSize="Medium"
+            />
+            
+            <Slider
+                Maximum="100"
+                Minimum="0" />
+
+            <Label
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="0"/>
+
+            <Label
+                Text="Calculation Results"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <HorizontalStackLayout Padding="20" Spacing="20">
+
+                <Border
+                    WidthRequest="150"
+                    HeightRequest="150"
+                    Padding="10"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 15">
+
+                    <VerticalStackLayout>
+                        <Label
+                        Text="Selling Price" />
+
+                        <Label
+                            Text="R 0.00" 
+                            FontSize="Medium"
+                            TextColor="BlueViolet"
+                            />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <Border
+                    WidthRequest="150"
+                    HeightRequest="150"
+                    Padding="10"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 15">
+
+                    <VerticalStackLayout>
+                        <Label
+                        Text="Profit Gained" />
+
+                        <Label
+                            Text="R 0.00" 
+                            FontSize="Medium"
+                            TextColor="Green"
+                            />
+                        
+                    </VerticalStackLayout>
+                </Border>
+
+            </HorizontalStackLayout>
+
+            <Line HeightRequest="15" BackgroundColor="Aqua" />
+            <Label
+                 
+                Text="Drag slider to see potential profit based on quantity" 
+                FontSize="Medium"
+            />
+
+            <Slider
+                Maximum="100"
+                Minimum="0" />
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+
+            <Label
+                FontSize="Caption"
+                Text="* All calculations are done based on South African Vat rate @ 15%" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

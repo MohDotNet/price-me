@@ -12,6 +12,7 @@
             <Entry
                 Placeholder="Cost Price"
                 x:Name="txtCost"
+                FontSize="20"
                 Keyboard="Numeric"
                 />
 
@@ -24,6 +25,7 @@
                 <CheckBox
                     x:Name="chkIncVat"
                     IsChecked="False"/>
+                
             </HorizontalStackLayout>
 
             <Line HeightRequest="15" BackgroundColor="Aqua" />
@@ -36,7 +38,9 @@
             <Slider
                 ValueChanged="Slider_ValueChanged"
                 Maximum="100"
-                
+                BackgroundColor="#23dca8"
+                MinimumTrackColor="White"   
+                MaximumTrackColor="DarkGreen"
                 Minimum="0" />
 
             <Label
@@ -107,6 +111,9 @@
             <Slider
                 x:Name="sldVolumne"
                 ValueChanged="sldVolumne_ValueChanged"
+                BackgroundColor="#23dca8"
+                MinimumTrackColor="White"
+                MaximumTrackColor="DarkGreen"
                 Maximum="100"
                 Minimum="0" />
 

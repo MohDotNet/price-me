@@ -54,7 +54,7 @@ namespace price_me.Services
 
         public double GetMarkupValue()
         {
-            return (costPrice * (markUp / 100d));
+            return Math.Round((costPrice * (markUp / 100d)),2,MidpointRounding.ToEven);
         }
 
         public double VolumeProfit(int quantity)

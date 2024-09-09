@@ -72,8 +72,7 @@
                             FontSize="Medium"
                             x:Name="lblSelling"
                             TextColor="BlueViolet"
-                            />
-
+                        />
                     </VerticalStackLayout>
 
                 </Border>
@@ -87,7 +86,9 @@
 
                     <VerticalStackLayout>
                         <Label
-                        Text="Profit Gained" />
+                        Text="Profit Gained" 
+                        SemanticProperties.HeadingLevel="Level2"
+                            />
 
                         <Label
                             Text="R 0.00" 
@@ -124,7 +125,7 @@
                 Text="0"/>
 
             <Image
-                Source="dotnet_bot.png"
+                Source="pricing.jpg"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
@@ -133,6 +134,13 @@
             <Label
                 FontSize="Caption"
                 Text="* All calculations are done based on South African Vat rate @ 15%" />
+
+            <Button
+                Margin="5"
+                Padding="5"
+                Text="Reset"
+                BackgroundColor="#23dca8" />
+            
         </VerticalStackLayout>
     </ScrollView>
 

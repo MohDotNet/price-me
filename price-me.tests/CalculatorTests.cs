@@ -25,6 +25,56 @@ namespace price_me.tests
         }
 
         [TestMethod]
+        public void CalculateSellingPrice_WhereCostIsZero()
+        {
+            // arrange
+            costPrice = 0;
+            markUp = 50;
+            incVat = true;
+            var expected = 0d;
+
+            // act
+            sellingPrice = GetSellingPrice();
+
+            // Assert
+            Assert.AreEqual(expected, sellingPrice);
+        }
+
+
+        [TestMethod]
+        public void CalculateSellingPrice_WhereCostIsLessThanZero()
+        {
+            // arrange
+            costPrice = -100;
+            markUp = 50;
+            incVat = true;
+            var expected = 0d;
+
+            // act
+            sellingPrice = GetSellingPrice();
+
+            // Assert
+            Assert.AreEqual(expected, sellingPrice);
+        }
+
+
+        [TestMethod]
+        public void CalculateSellingPrice_WhereMarkupIsZero()
+        {
+            // arrange
+            costPrice = 100;
+            markUp = 0;
+            incVat = false;
+            var expected = 100d;
+
+            // act
+            sellingPrice = GetSellingPrice();
+
+            // Assert
+            Assert.AreEqual(expected, sellingPrice);
+        }
+
+        [TestMethod]
         public void CalculateSellingPrice_WithTaxOnCostPrice()
         {
             // arrange
@@ -81,6 +131,9 @@ namespace price_me.tests
         }
         public double GetSellingPrice()
         {
+            if (costPrice <= 0)
+                return 0;
+
             if (incVat)
             {
                 // remove tax to calculate 

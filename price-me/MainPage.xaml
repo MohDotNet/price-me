@@ -105,8 +105,16 @@
             />
 
             <Slider
+                x:Name="sldVolumne"
+                ValueChanged="sldVolumne_ValueChanged"
                 Maximum="100"
                 Minimum="0" />
+
+            <Label
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                x:Name="lblVolume"
+                Text="0"/>
 
             <Image
                 Source="dotnet_bot.png"

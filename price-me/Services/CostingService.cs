@@ -54,7 +54,16 @@ namespace price_me.Services
 
         public double GetMarkupValue()
         {
-            return (costPrice * (markUp/100));
+            return (costPrice * (markUp / 100d));
         }
+
+        public double VolumeProfit(int quantity)
+        {
+            if (quantity <= 0)
+                return 0;
+
+            return GetMarkupValue() * quantity; 
+        }
+
     }
 }
